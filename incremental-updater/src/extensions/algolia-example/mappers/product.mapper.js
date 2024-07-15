@@ -3,7 +3,8 @@ export default function map(product, locale) {
   let mappedProduct = {};
   let categories = product.categories.map((category) => {
     return {
-      id: 'should show up here',
+      id: category.obj?.key,
+      wholeCategory: category,
     };
   });
   let variants = [];
